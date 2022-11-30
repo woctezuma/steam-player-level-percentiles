@@ -7,12 +7,13 @@ from src.utils import remove_duplicate_values_from_dict
 def download_player_level_percentiles(
     start_level=1,
     stop_level=1000,
+    step_level=1,
     verbosity_delta=100,
 ):
     access_token = load_access_token()
     d = load_json_failsafe(PERCENTILE_FNAME)
 
-    for player_level in range(start_level, stop_level + 1):
+    for player_level in range(start_level, stop_level + 1, step_level):
         player_level_str = str(player_level)
 
         if player_level_str not in d:
