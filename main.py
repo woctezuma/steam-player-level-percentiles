@@ -7,7 +7,7 @@ def main():
     force_update = False
 
     if force_update:
-        d = download_player_level_percentiles(start_level=1, end_level=5000)
+        d = download_player_level_percentiles(start_level=1, stop_level=5000)
     else:
         d = load_json(TRIMMED_PERCENTILE_FNAME)
     n = compute_denominators_from_dict(d, max_input_value=100)
