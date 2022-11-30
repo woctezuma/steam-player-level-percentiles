@@ -9,11 +9,15 @@ def download_player_level_percentiles(
     stop_level=1000,
     step_level=1,
     verbosity_delta=100,
+    player_level_range=None,
 ):
+    if player_level_range is None:
+        player_level_range = range(start_level, stop_level + 1, step_level)
+
     access_token = load_access_token()
     d = load_json_failsafe(PERCENTILE_FNAME)
 
-    for player_level in range(start_level, stop_level + 1, step_level):
+    for player_level in player_level_range:
         player_level_str = str(player_level)
 
         if player_level_str not in d:
