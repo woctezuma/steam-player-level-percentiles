@@ -2,7 +2,11 @@ import requests
 
 API_BASE_URL = "https://api.steampowered.com"
 LEVEL_ENDPOINT = "/IPlayerService/GetSteamLevelDistribution/v1/"
-ACHIEVEMENT_ENDPOINT = "/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/"
+# For achievements, choose either "v2" or "v0002". Caveat: there are slight differences!
+API_VERSION = "v0002"
+ACHIEVEMENT_ENDPOINT = (
+    f"/ISteamUserStats/GetGlobalAchievementPercentagesForApp/{API_VERSION}/"
+)
 
 
 def get_params(access_token, player_level):
