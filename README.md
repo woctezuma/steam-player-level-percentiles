@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python main.py
+python player_levels.py
 ```
 
 
