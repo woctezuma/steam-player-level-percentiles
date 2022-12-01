@@ -71,7 +71,7 @@ $$
 1048576 = 1024^2 = 2^{20}
 $$
 
-This could indicate a truncation of the numbers in binary code,
+This could indicate a truncation of the numbers in binary representation,
 which would prevent the estimation of a total number of Steam players
 of the order $2^{28} - 2^{30}$, i.e. hundreds of millions.
 
