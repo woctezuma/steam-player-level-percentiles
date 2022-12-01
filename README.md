@@ -57,6 +57,13 @@ Following our assumption, this would mean that the total number of Steam players
 a multiple of `104,857,6XY`, where `XY` are unknown digits.
 This is not super useful info.😅
 
+> **Note**
+> Interestingly, the least common multiplier is a power of 2.
+
+$$
+1048576 = 1024^2 = 2^{20}
+$$
+
 ## References
 
 - [`GetSteamLevelDistribution`][steamdb-api]: API which returns how a given Steam Level compares the user base at large
