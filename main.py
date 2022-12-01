@@ -1,4 +1,4 @@
-from src.data_utils import load_json, TRIMMED_PERCENTILE_FNAME
+from src.data_utils import load_json, TRIMMED_PERCENTILE_FNAME, load_access_token
 from src.download_utils import download_player_level_percentiles
 from src.math_utils import compute_denominators_from_dict
 
@@ -9,7 +9,10 @@ def main():
     player_level_range += list(range(5000, 29200, 50))
 
     if force_update:
-        d = download_player_level_percentiles(player_level_range=player_level_range)
+        d = download_player_level_percentiles(
+            player_level_range=player_level_range,
+            access_token=load_access_token(),
+        )
     else:
         d = load_json(TRIMMED_PERCENTILE_FNAME)
     n = compute_denominators_from_dict(d, max_input_value=100)
