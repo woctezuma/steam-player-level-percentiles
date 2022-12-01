@@ -5,9 +5,11 @@ from src.math_utils import compute_denominators_from_dict
 
 def main():
     force_update = False
+    player_level_range = [int(i) for i in load_json(TRIMMED_PERCENTILE_FNAME)]
+    player_level_range += list(range(5000, 29200, 50))
 
     if force_update:
-        d = download_player_level_percentiles(start_level=1, stop_level=5000)
+        d = download_player_level_percentiles(player_level_range=player_level_range)
     else:
         d = load_json(TRIMMED_PERCENTILE_FNAME)
     n = compute_denominators_from_dict(d, max_input_value=100)
