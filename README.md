@@ -57,12 +57,18 @@ Following our assumption, this would mean that the total number of Steam players
 a multiple of `104,857,6XY`, where `XY` are unknown digits.
 This is not super useful info.😅
 
+## Truncation
+
 > **Note**
 > Interestingly, the least common multiplier is a power of 2.
 
 $$
 1048576 = 1024^2 = 2^{20}
 $$
+
+This could indicate a truncation of the numbers in binary code,
+which would prevent the estimation of a total number of Steam players
+of the order $2^{28} - 2^{30}$, i.e. hundreds of millions.
 
 ## References
 
