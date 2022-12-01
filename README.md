@@ -19,6 +19,11 @@ pip install -r requirements.txt
 python player_levels.py
 ```
 
+To apply the method to achievement unlock percentages, run:
+
+```bash
+python achievements.py --app-id 788100
+```
 
 ## Assumption
 
