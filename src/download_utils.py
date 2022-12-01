@@ -20,11 +20,11 @@ def download_player_level_percentiles(
 
     d = load_json_failsafe(PERCENTILE_FNAME)
 
-    for player_level in player_level_range:
+    for i, player_level in enumerate(player_level_range, start=1):
         player_level_str = str(player_level)
 
         if player_level_str not in d:
-            if player_level % verbosity_delta == 0:
+            if i % verbosity_delta == 0:
                 print(f"Query fo player_level={player_level}")
 
             player_level_percentile = query_player_level_percentile(
