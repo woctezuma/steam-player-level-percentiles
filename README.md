@@ -64,7 +64,7 @@ This is not super useful info.😅
 
 ## Truncation
 
-> **Note**
+> [!Note]
 > Interestingly, the least common multiplier is a power of 2.
 
 $$
